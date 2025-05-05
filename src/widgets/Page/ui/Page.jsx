@@ -6,7 +6,6 @@ import './Page.css';
 
 export const Page = () => {
     const [collections, setCollections] = useState([]);
-    const [categories, setCategories] = useState([])
 
     useEffect(() => {
         fetchCollections().then((collections) => {
@@ -15,16 +14,16 @@ export const Page = () => {
         });
     }, []);
 
-    // console.log('Пример URLs изображений:', collections[0].name);
-
     return (
         <div className="App">
             <h1>Моя коллекция фотографий</h1>
             <div className="top">
                 <ul className="tags">
-                    {categories.map((category) => (
-                        <li key={category.id}>{category.name}</li>
-                    ))}
+                    <li className="active">Все</li>
+                    <li>Горы</li>
+                    <li>Море</li>
+                    <li>Архитектура</li>
+                    <li>Города</li>
                 </ul>
                 <input className="search-input" placeholder="Поиск по названию" />
             </div>

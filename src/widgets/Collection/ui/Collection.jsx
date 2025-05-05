@@ -1,4 +1,4 @@
-export const Collection = ({name, images=[]}) => {
+export const Collection = ({name, images}) => {
     return (
         <>
             <div className="collection">
