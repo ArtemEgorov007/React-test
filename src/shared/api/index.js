@@ -1,1 +1,1 @@
-export {fetchCollections} from './fetchCollections';
+export { fetchCollections } from './collections';
